@@ -38,9 +38,6 @@ services:
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root
       
-
-
-
 networks:
   default-network:
     driver: bridge
