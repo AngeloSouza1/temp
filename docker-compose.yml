@@ -19,6 +19,7 @@ services:
     restart: always
     build:
       context: ./node
+    command: sh -c './wait-for-it.sh -t 10 db:3306 -- npm start'
     depends_on:
       - db
     networks:
