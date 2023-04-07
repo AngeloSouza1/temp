@@ -5,7 +5,7 @@ const port = process.env.APP_PORT || 3000
 
 const config = {
   host: 'db',
-  user: 'root',
+  user:'root',
   password: 'root',
   database: 'nodedb',
 }
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   connection.query(`SELECT nome FROM people`, (error, results, fields) => {
     res.send(`
       <h1>Full Cycle Rocks !</h1>
-      <ol>
+     <ol>
         ${!!results.length ? results.map(el => `<li>${el.nome}</li>`).join('') : ''}
       </ol>
     `)

@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm i
+ RUN npm i
+
+RUN chmod +x wait-for-it.sh
 
 EXPOSE 3000
 
